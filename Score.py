@@ -1,15 +1,19 @@
 grades = list(map(int, input().split()))
 fail = 0
+max = 0
+min = 100
 for grade in grades:
     if grade < 60:
         fail += 1
-print(fail)
 
+    total += grade
 
-total = 0
-
-for i in grades:
-    total += int(i)
+    if grade > max:
+        max = grade
+    if grade < min:
+        min = grade
 average = total / len(grades)
 
 print(average)
+print("不及格人數:", fail)
+print(f"max: {max}, min: {min}")
