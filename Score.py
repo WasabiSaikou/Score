@@ -5,9 +5,15 @@ min = 100
 for grade in grades:
     if grade < 60:
         fail += 1
+
+    total += grade
+
     if grade > max:
         max = grade
     if grade < min:
         min = grade
+average = total / len(grades)
+
+print(average)
 print("不及格人數:", fail)
 print(f"max: {max}, min: {min}")
